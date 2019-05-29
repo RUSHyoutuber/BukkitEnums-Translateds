@@ -5,36 +5,38 @@ import org.bukkit.potion.PotionEffectType;
 
 public enum PotionName {
 
-	ABSORPTION("AbsorÁ„o"),
+	ABSORPTION("Absor√ß√£o"),
+	BAD_OMEN("Mau press√°gio"),
 	BLINDNESS("Cegueira"),
-	CONDUIT_POWER("ProteÁ„o do mar"),
-	CONFUSION("N·usea"),
-	DAMAGE_RESISTANCE("ResistÍncia"),
-	DOLPHINS_GRACE("GraÁa do golfinho"),
+	CONDUIT_POWER("Prote√ß√£o do mar"),
+	CONFUSION("N√°usea"),
+	DAMAGE_RESISTANCE("Resist√™ncia"),
+	DOLPHINS_GRACE("Gra√ßa do golfinho"),
 	FAST_DIGGING("Pressa"), 
-	FIRE_RESISTANCE("ResistÍncia ao fogo"),
+	FIRE_RESISTANCE("Resist√™ncia ao fogo"),
 	GLOWING("Brilho"),
-	HARM("Dano instant‚neo"),
-	HEAL("Vida instant‚nea"),
+	HARM("Dano instant√¢neo"),
+	HEAL("Vida instant√¢nea"),
 	HEALTH_BOOST("Vida extra"),
+	HERO_OF_THE_VILLAGE("Her√≥i da vila"),
 	HUNGER("Fome"),
-	INCREASE_DAMAGE("ForÁa"),
+	INCREASE_DAMAGE("For√ßa"),
 	INVISIBILITY("Invisibilidade"),
 	JUMP("Super pulo"), 
-	LEVITATION("LevitaÁ„o"),
+	LEVITATION("Levita√ß√£o"),
 	LUCK("Sorte"),
-	NIGHT_VISION("Vis„o norturna"),
+	NIGHT_VISION("Vis√£o norturna"),
 	POISON("Veneno"),
-	REGENERATION("RegeneraÁ„o"),
-	SATURATION("SaturaÁ„o"),
-	SLOW("Lentid„o"),
-	SLOW_DIGGING("CansaÁo"),
+	REGENERATION("Regenera√ß√£o"),
+	SATURATION("Satura√ß√£o"),
+	SLOW("Lentid√£o"),
+	SLOW_DIGGING("Cansa√ßo"),
 	SLOW_FALLING("Queda lenta"),
 	SPEED("Velocidade"),
-	UNLUCK("M· sorte"),
-	WATER_BREATHING("RespiraÁ„o aqu·tica"),
+	UNLUCK("M√° sorte"),
+	WATER_BREATHING("Respira√ß√£o aqu√°tica"),
 	WEAKNESS("Fraqueza"),
-	WITHER("DecomposiÁ„o");
+	WITHER("Decomposi√ß√£o");
 	
 	private String name;
 	
@@ -47,11 +49,16 @@ public enum PotionName {
 	}
 	
 	public static PotionName valueOf(PotionEffect potionEffect) {
-		return PotionName.valueOf(potionEffect.getType());
+		return valueOf(potionEffect.getType());
 	}
 	
 	public static PotionName valueOf(PotionEffectType potionEffect) {
-		return PotionName.valueOf(potionEffect.getName());
+		return valueOf(potionEffect.getName());
+	}
+	
+	@Override
+	public String toString() {
+		return this.name;
 	}
 	
 }
