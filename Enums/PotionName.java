@@ -25,7 +25,7 @@ public enum PotionName {
 	JUMP("Super pulo"), 
 	LEVITATION("Levitação"),
 	LUCK("Sorte"),
-	NIGHT_VISION("Visão norturna"),
+	NIGHT_VISION("Visão noturna"),
 	POISON("Veneno"),
 	REGENERATION("Regeneração"),
 	SATURATION("Saturação"),
